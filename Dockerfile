@@ -3,11 +3,11 @@ FROM openjdk:8-jre-alpine
 MAINTAINER Sean Nelson <audiohacked@gmail.com>
 
 ARG MODPACK="FTBInteractions"
+ARG FTB_VERSION="1_0_1" \
+ARG BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/${MODPACK}" \
+ARG SERVER_FILE="${MODPACK}Server.zip" \
 
-ENV BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/${MODPACK}" \
-    FTB_VERSION="1_0_1" \
-    SERVER_FILE="${MODPACK}Server.zip" \
-    SERVER_PORT=25565
+ENV SERVER_PORT=25565
 
 WORKDIR /minecraft
 
